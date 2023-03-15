@@ -1,0 +1,576 @@
+.wrap {
+    max-width: 1170px;
+    margin: auto;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: #000000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* header1 */
+.background_header_1 {
+    background-color: #f7f8fa !important;
+    height: 30px;
+
+}
+
+.header1 ul li a {
+    font-size: 12.8px;
+    color: rgba(102, 102, 102, 0.85);
+    padding: 5px 0;
+    letter-spacing: 0.256px;
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.mail a span,
+.time a span,
+.phone_number a span {
+    font-size: 16px;
+    margin-right: 5px;
+    line-height: 1.2;
+}
+
+.mail {
+    padding-right: 10px;
+}
+
+.time {
+    padding: 0 10px;
+    border-left: 1px solid rgba(102, 102, 102, 0.85);
+    border-right: 1px solid rgba(102, 102, 102, 0.85);
+}
+
+.phone_number {
+    padding-left: 10px;
+}
+
+.pull-right a span {
+    font-size: 12px;
+    margin-right: 5px;
+    line-height: 1.2;
+    color: #999;
+}
+
+/* logo */
+.logo img {
+    width: auto;
+    height: 96px;
+    padding: 11px 0;
+}
+
+.icon-menu {
+    display: none;
+}
+
+.search {
+    height: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.searchTerm {
+    width: 80%;
+    font-size: 13.2px;
+    height: 39px;
+    border: 2px solid #99CA58;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 0px 9.9px;
+    box-shadow: unset;
+    background-color: #F2F3F5 !important;
+}
+
+.searchTerm:active {
+    border: 2px solid #99CA58;
+}
+
+.searchButton {
+    height: 39px;
+    font-size: 13.2px;
+    background-color: #99CA58;
+    border: 2px solid #99CA58;
+    text-align: center;
+    border-top-right-radius: 5px;
+    padding: 3px 16px;
+    border-bottom-right-radius: 5px;
+}
+
+.small-logo {
+    display: none;
+}
+
+.search span {
+    color: #fff;
+    font-size: 15.83px;
+    margin-top: 5px;
+}
+
+.nguoi_dung {
+    height: 96px;
+    line-height: 96px;
+}
+
+.icon-gio-hang {
+    display: none;
+}
+
+.gio_hang span {
+    color: rgba(102, 102, 102, 0.85);
+    font-size: 13px;
+    padding: 3px;
+}
+
+.gio_hang a {
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #99CA58;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.dang_nhap a {
+    color: rgba(102, 102, 102, 0.85);
+    font-weight: bold;
+    font-size: 12.8px;
+    padding: 5px 10px;
+}
+
+/* navbar */
+.navbar .active {
+    color: #fff;
+}
+
+.nav>li>a:focus {
+    background-color: unset;
+    color: #fff;
+}
+
+.nav a {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12.8px;
+    letter-spacing: 0.256px;
+    line-height: 16px;
+}
+
+.navbar {
+    background-color: #191919;
+    border-radius: 0px;
+    margin-bottom: 0;
+    transition-delay: 2s;
+}
+
+.navbar li {
+    padding: 0 15px;
+}
+
+.navbar li a:hover {
+    background-color: unset;
+    color: #fff;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+/* tooltip */
+.tooltip1 {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -80px;
+    font-size: 14px;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip1:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* home-main */
+.khuyen-mai {
+    margin: 30px 0;
+}
+
+.border {
+    padding: 0 15px;
+}
+
+.km-tieu-de-tim-kiem h4 {
+    font-size: 27.2px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 13.6px;
+}
+
+.km-tieu-de-tim-kiem p {
+    margin-top: 0;
+    margin-bottom: 20.8px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.search_1 {
+    position: relative;
+}
+
+.searchTerm_1 {
+    width: 100%;
+    border: 1px solid #ddd;
+    height: 39px;
+    font-size: 15.52px;
+    padding: 0 11.64px;
+    color: #333;
+    background-color: #fff;
+}
+
+.searchButton_1 {
+    position: absolute;
+    right: -5px;
+    top: -1px;
+    background-color: #99CA58;
+    padding: 0 9.312px;
+    height: 39px;
+    border: none;
+    transform: translate(-5px, 1px)
+}
+
+.searchButton_1 span {
+    font-size: 18.624px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.km-img-product {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.km-img-product img {
+    width: 100%;
+}
+
+.km-tieu-de-san-pham {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.km-product-content {
+    width: calc(100% - 60px);
+}
+
+.km-product-content a {
+    font-size: 16px;
+    line-height: 1.3;
+    color: #334862;
+}
+
+.km-product-content p {
+    font-size: 16px;
+    color: #97ca51 !important;
+    font-weight: bold;
+
+
+}
+
+.km-product-content del {
+    font-size: 16px;
+    color: #97ca51 !important;
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+.km-product-content a:hover {
+    color: #99CA58;
+}
+
+.km-product {
+    display: flex;
+}
+
+/* contact */
+.contact {
+    background-color: #99CA58;
+    padding: 10px 0;
+}
+
+.icon-img-contact img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.contact-info {
+    margin-left: -10px;
+}
+
+.contact-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+
+.contact-content {
+    color: #f1f1f1;
+    font-size: 16px;
+}
+
+/* footer */
+.footer {
+    padding: 20px 0;
+}
+
+.footer-title h4 {
+    font-weight: 600;
+    color: #99CA58;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.05;
+    letter-spacing: 0.8px;
+}
+
+.footer-content ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding: 0;
+}
+
+.footer-content p {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 20.8px;
+}
+
+.footer-content li {
+    color: #000000;
+    font-size: 16px;
+    margin-left: 20.8px;
+    margin-bottom: 9.6px;
+
+}
+
+.footer-content a {
+    color: #334862;
+}
+
+.footer-content td {
+    border-bottom: 1px solid rgba(102, 102, 102, 0.85);
+    padding: 6px 0;
+}
+
+table {
+    width: 100%;
+}
+
+table a {
+    font-size: 16px;
+    color: #334862;
+}
+
+.pull {
+    padding: 0 7px;
+}
+
+.footer_icon span {
+    font-size: 22.08px;
+    color: #999;
+}
+
+.footer_icon,
+.footer-content {
+    margin-bottom: 30px;
+}
+
+.footer-content a:hover,
+.footer_icon a:hover {
+    color: #99CA58;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+.tooltip1 {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -80px;
+
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip1:hover .tooltiptext {
+    visibility: visible;
+}
+
+.footer_icon .tooltiptext {
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .header1,
+    .logo,
+    .search,
+    .nguoi_dung,
+    nav,
+    .background_header_1 {
+        display: none;
+    }
+
+    .icon-menu,
+    .icon-gio-hang {
+        display: unset;
+        display: inline-block;
+        height: 73px;
+        position: relative;
+        width: 100%;
+    }
+
+    .background_header_2 {
+        padding: 5px 0;
+    }
+
+    .icon-menu span,
+    .icon-gio-hang span {
+        font-size: 25px;
+        color: gray;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .icon-menu span {
+        left: 0%;
+    }
+
+    .icon-gio-hang span {
+        right: 0%;
+    }
+
+    .small-logo {
+        display: unset;
+
+    }
+
+    .small-logo img {
+        width: auto;
+        height: 73px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contact .border_contact {
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 2px 0;
+    }
+
+    .icon-img-contact img {
+        margin-left: 10px;
+    }
+
+    .border {
+        margin-bottom: 50px;
+    }
+
+    .km-product {
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .small-logo img {
+        width: auto;
+        height: 65px;
+    }
+}

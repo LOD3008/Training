@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <style>
+   body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+   }
+
+   .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(60, 198, 136);
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+   }
+
+   .side-nav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+      font-weight: bold;
+      font-style: italic;
+   }
+
+   .side-nav a:hover {
+      color: red;
+   }
+
+   .side-nav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+   }
+
+   #main {
+      transition: margin-left 0.5s;
+      padding: 16px;
+   }
+
+   #main span:hover {
+      color: green;
+   }
+
+   @media screen and (max-height: 450px) {
+      .side-nav {
+         padding-top: 15px;
+      }
+      .side-nav a {
+         font-size: 18px;
+      }
+   }
+   </style>
+</head>
+<body>
+   <div id="mySide-nav" class="side-nav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+   </div>
+   <div id="main">
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()">☰</span>
+      <h2>Side Navigation bar</h2>
+      <p>click on the above menu bar to see how off-canvas menu work.</p>
+   </div>
+   <script>
+   function openNav() {
+      document.getElementById("mySide-nav").style.width = "250px";
+      document.getElementById("main").style.display = "none";
+   }
+
+   function closeNav() {
+      document.getElementById("mySide-nav").style.width = "0";
+      document.getElementById("main").style.display = "block";
+   }
+   </script>
+</body>
+</html>
