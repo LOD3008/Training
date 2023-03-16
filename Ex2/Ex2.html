@@ -7,18 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css"
+        integrity="sha512-nNatP1G6CEh43irXY/GN4cDcLRX/R0jAYAV/ulFZcotSXcuIQE5Do4TuDOYNAD2SCIpmIbaYSllyjTysSCkpEw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="Ex2.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <link rel="stylesheet" href="Ex2.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js"
+        integrity="sha512-D1qgHT+xXRgN9gLLLYHbQ/c8wkrADqfXg1kr1dRbP9nOtNzIKKNDU+hmFqR1fSbsU1YFBkw6TbvfZo+SyI0K6w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Trinity Studio</title>
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
 </head>
@@ -56,6 +62,7 @@
                                     </span></a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -76,7 +83,7 @@
 
                                 <div class="gio_hang">
                                     <div class="icon_menu">
-                                        <a href="#">
+                                        <a href="javascript:;" onclick="openNav()">
                                             <img src="images/menu.svg" alt="menu">
                                         </a>
                                     </div>
@@ -104,7 +111,7 @@
                 </div>
             </div>
         </div>
-        </div>
+        
 
         <nav class="menu" data-spy="affix" data-offset-top="250">
             <div class="wrap">
@@ -136,6 +143,40 @@
                 </div>
             </div>
         </nav>
+
+        <div class="menu-mobile">
+            <nav id="menu">
+                <div class="menu-title">Menu</div>
+                <a class="close-menu" onclick="closeNav()">x</a>
+                <ul id="panel-menu">
+                    <li class="mobile-title"><a href="">GIỚI THIỆU</a></li>
+                    <li class="mobile-title"><a href="#menu2" data-toggle="collapse" data-parent="#accordion">OLIVIA BURTON
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                    </a>
+                    </li>
+                    <div id="menu2" class="panel-collapse collapse">
+                        <div class="panel-body-2">
+                            <a href=""><span class="glyphicon glyphicon-menu-right"></span> ĐỒNG HỒ</a>
+                            <a href=""><span class="glyphicon glyphicon-menu-right"></span> TRANG SỨC</a>
+                            <a href=""><span class="glyphicon glyphicon-menu-right"></span> DÂY</a>
+                        </div>
+                    </div>
+                    <li class="mobile-title"><a href="">NEW ARRIVALS</a>
+                    </li>
+                    <li class="mobile-title"><a href="">SALE
+                        <img src="https://traffic-edge12.cdn.vncdn.io/cdn-pos/63947a-34605/menu/20220705_8c8ANfiR266w1iUrIOomuC2C.png"
+                            alt="img-sale">
+                    </a>
+                    </li>
+                    <li class="mobile-title"><a href="">TIN TỨC</a></li>
+                </ul>
+                <div class="nguoi-dung">
+                    <a class="dang-ky" href=""><span class="glyphicon glyphicon-user"></span> Đăng ký</a>
+                    <a class="dang-nhap" href=""><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a>
+                </div>
+            </nav>
+    
+        </div>
     </head>
 
     <section>
@@ -179,7 +220,8 @@
                                         </a>
                                     </div>
                                     <div class="product-content">
-                                        <a href="chi-tiet.html" class="name">ĐỒNG HỒ OLIVIA BURTON SPARKLE BUTTERFLY 34MM CHAMPAGNE &
+                                        <a href="chi-tiet.html" class="name">ĐỒNG HỒ OLIVIA BURTON SPARKLE BUTTERFLY
+                                            34MM CHAMPAGNE &
                                             GOLD MESH - HC</a>
                                         <p class="price">6.290.000</p>
                                     </div>
@@ -686,18 +728,21 @@
             </div>
         </div>
     </footer>
+    
+    <div>
+        <button id="btn-messenger" class="myBtn">
+            <img src="images/Messenger.svg" alt="messenger">
+        </button>
 
-    <button id="btn-messenger" class="myBtn">
-        <img src="images/Messenger.svg" alt="messenger">
-    </button>
+        <button id="btn-phone" class="myBtn">
+            <span class="glyphicon glyphicon-earphone"></span>
+        </button>
 
-    <button id="btn-phone" class="myBtn">
-        <span class="glyphicon glyphicon-earphone"></span>
-    </button>
-
-    <button id="btn-back-to-top" class="myBtn">
-        <span class="glyphicon glyphicon-menu-up"></span>
-    </button>
+        <button id="btn-back-to-top" class="myBtn">
+            <span class="glyphicon glyphicon-menu-up"></span>
+        </button>
+    </div>
+    
 </body>
 <script src="Ex2.js"></script>
 

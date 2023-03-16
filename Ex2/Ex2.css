@@ -184,6 +184,7 @@ input{
 .menu {
     border-top: 1px solid #eee;
     background-color: #fff;
+    box-shadow: 0 5px 10px 0 #eee;
 }
 
 .block-navbar {
@@ -252,8 +253,16 @@ input{
     display: flex;
     justify-content: space-between;
     visibility: hidden;
+    transition: .5s linear;
+    transform: translate(0,10px);
+    opacity: 0;
 }
+.nav-hover-show:hover{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0,0px);
 
+}
 .nav-hover-show a {
     display: block;
     width: 100px;
@@ -264,6 +273,9 @@ input{
 
 .nav-hover:hover~.nav-hover-show {
     visibility: visible;
+    opacity: 1;
+    transform: translate(0,0);
+
 }
 
 .nav-hover-show:hover {
@@ -623,18 +635,18 @@ iframe {
 }
 
 /* olivia burton */
-.block-title {
+/* .block-title {
     padding: 30px 20px 0 0;
 }
-
-.block-title a,
+ */
+/* .block-title a, */
 .block-options-title a {
     font-size: 15px;
     color: #111;
     letter-spacing: 0.15px;
 }
 
-.block-content,
+/* .block-content, */
 .block-options-content {
     padding: 10px 18px 26px 0px;
     border-bottom: 1px solid #efefef;
@@ -645,11 +657,11 @@ ul {
     padding: 0;
 }
 
-.block-content li {
+/* .block-content li {
     padding: 15px 0;
-}
+} */
 
-.block-content a,
+/* .block-content a, */
 .block-options-content a {
     color: #777;
     text-transform: uppercase;
@@ -672,9 +684,9 @@ ul {
     text-decoration: none;
 }
 
-.block-content a:hover {
+/* .block-content a:hover {
     color: #d19a99;
-}
+} */
 
 .block-options-content {
     margin-bottom: 14px;
@@ -792,6 +804,9 @@ ul {
 }
 
 /* tin-tuc */
+#tin-tuc{
+    margin-top: 10px;
+}
 .list-news-menu {
     margin-bottom: 30px;
 }
@@ -811,6 +826,7 @@ ul {
     font-size: 14px;
     font-weight: 600;
     margin: 18px 0 9px;
+    line-height: 1.6;
 }
 
 .news-time {
@@ -886,16 +902,16 @@ ul {
     width: 100%;
     height: 451px;
 }
-.glyphicon-menu-left, .glyphicon-menu-right{
+.slider .glyphicon-menu-left,.slider .glyphicon-menu-right{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 30px;
 }
-.glyphicon-menu-left{
+.slider .glyphicon-menu-left{
     left: 15px;
 }
-.glyphicon-menu-right{
+.slider .glyphicon-menu-right{
     right: 15px;
 }
 .owl-nav{
@@ -945,6 +961,7 @@ h4{
     font-weight: 600;
 
 }
+
 h5{
     display: block;
     padding-bottom: 10px;
@@ -1117,5 +1134,98 @@ td{
     .border-sp-lien-quan{
         height: auto;
     }
+
+    #background_header_2 {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        z-index: 999;
+    }
+
 }
 
+
+#menu .menu-title{
+    font-size: 13px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.menu-mobile {
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0,.7);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s linear;
+
+}
+
+.menu-mobile #menu {
+    height: 100%;
+    width: 85%;
+    background: #f6f6f6;
+    transform: translate(-100%,0);
+    transition: .5s linear;
+}
+.menu-mobile.active {
+    visibility: visible;
+    opacity: 1;
+}
+.menu-mobile.active #menu{
+    transform: translate(0,0);
+}
+.menu-mobile #menu ul{
+    width: 90%;
+}
+
+.menu-mobile #menu ul > li a {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    padding: 13px 0 13px 15px;
+    border-bottom: 1px solid #ddd;
+}
+.close-menu{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.mobile-title img{
+    width: 20px;
+    height: 30px;
+}
+.nguoi-dung{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.dang-ky , .dang-nhap {
+    color: #777;
+    font-size: 16px;
+}
+#menu a:hover, #menu ul li a:hover{
+    color: #000;
+    text-decoration: none;
+}
+.mobile-title .glyphicon-menu-down{
+    float: right;
+}
+.panel-body-2 a{
+    font-size: 13px;
+    display: block;
+    color: #777;
+    padding: 10px 0 10px 15px;
+}
+.panel-body-2{
+    background-color: #f2f2f2;
+}

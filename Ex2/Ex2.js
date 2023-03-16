@@ -68,11 +68,15 @@ $(document).ready(function () {
     slider.owlCarousel({
         loop: false,
         nav: true,
-        navText: ["<span class='glyphicon glyphicon-menu-left'>","<span class='glyphicon glyphicon-menu-right'>"],
+        navText: ["<span class='glyphicon glyphicon-menu-left'>", "<span class='glyphicon glyphicon-menu-right'>"],
         items: 1
     }).on('changed.owl.carousel', function (e) {
         //On change of main item to trigger thumbnail item
         thumbnailSlider.trigger('to.owl.carousel', [e.item.index, duration, true]);
+        $('#thumbnailSlider img').removeClass('active');
+
+        thumbnailSlider.find('.owl-item img').eq(e.item.index).addClass('active');
+
     });
 
     // carousel function for thumbnail slider
@@ -85,17 +89,25 @@ $(document).ready(function () {
             0: {
                 items: 4
             },
-
         }
-    }).on('click', '.owl-item', function () {
+    }).on('click', '.owl-item', function (e) {
         // On click of thumbnail items to trigger same main item
         slider.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+        $('#thumbnailSlider img').removeClass('active');
+        thumbnailSlider.find('.owl-item img').eq($(this).index()).addClass('active');
 
     });
-   /*  $('.slider-right').click(function () {
-        slider.trigger('next.owl.carousel');
-    });
-    $('.slider-left').click(function () {
-        slider.trigger('prev.owl.carousel');
-    }); */
+    /*  $('.slider-right').click(function () {
+         slider.trigger('next.owl.carousel');
+     });
+     $('.slider-left').click(function () {
+         slider.trigger('prev.owl.carousel');
+     }); */
 });
+
+function openNav() {
+    $('.menu-mobile').addClass('active')
+}
+function closeNav() {
+    $('.menu-mobile').removeClass('active')
+}
