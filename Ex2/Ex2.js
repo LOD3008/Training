@@ -39,6 +39,47 @@ $(document).ready(function () {
 
         }
     })
+
+    // reference for main items
+    var slider = $('#slider');
+    // reference for thumbnail items
+    var thumbnailSlider = $('#thumbnailSlider');
+    //transition time in ms
+    var duration = 500;
+
+    // carousel function for main slider
+    slider.owlCarousel({
+        loop: false,
+        nav: true,
+        navText: ["<span class='glyphicon glyphicon-menu-left'>", "<span class='glyphicon glyphicon-menu-right'>"],
+        items: 1
+    }).on('changed.owl.carousel', function (e) {
+        //On change of main item to trigger thumbnail item
+        thumbnailSlider.trigger('to.owl.carousel', [e.item.index, duration, true]);
+        $('#thumbnailSlider img').removeClass('active');
+
+        thumbnailSlider.find('.owl-item img').eq(e.item.index).addClass('active');
+
+    });
+
+    // carousel function for thumbnail slider
+    thumbnailSlider.owlCarousel({
+        loop: false,
+        //to display the thumbnail item in center
+        margin: 15,
+        stagePadding: 35,
+        responsive: {
+            0: {
+                items: 4
+            },
+        }
+    }).on('click', '.owl-item', function (e) {
+        // On click of thumbnail items to trigger same main item
+        slider.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+        $('#thumbnailSlider img').removeClass('active');
+        thumbnailSlider.find('.owl-item img').eq($(this).index()).addClass('active');
+
+    });    
 });
 
 var btn = $('#btn-back-to-top');
@@ -56,7 +97,7 @@ btn.on('click', function (e) {
     $('html, body').animate({ scrollTop: 0 }, '300');
 });
 
-$(document).ready(function () {
+/* $(document).ready(function () {
     // reference for main items
     var slider = $('#slider');
     // reference for thumbnail items
@@ -102,8 +143,8 @@ $(document).ready(function () {
      });
      $('.slider-left').click(function () {
          slider.trigger('prev.owl.carousel');
-     }); */
-});
+     }); 
+}); */
 
 function openNav() {
     $('.menu-mobile').addClass('active')
