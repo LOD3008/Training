@@ -48,7 +48,7 @@ body {
     margin: auto;
 }
 
-section {
+.space-main{
     margin-bottom: 30px;
 }
 
@@ -75,14 +75,14 @@ h1 {
     font-size: 700;
 }
 
-.color_black:hover {
+.color-black:hover {
     color: black;
 }
 input{
     outline: none;
 }
 /* header */
-#background_header_1 {
+#background-header-1 {
     background-color: #d19a99;
     border-bottom: 2px solid #414142;
     color: #fff;
@@ -92,19 +92,19 @@ input{
     text-transform: uppercase;
 }
 
-.header1_left_space {
+.header1-left-space {
     margin-right: 25px;
 }
 
-.headder1_right {
+.headder1-right {
     text-align: right;
 }
 
-.headder1_right a {
+.headder1-right a {
     color: #fff;
 }
 
-.hearder1_right_space {
+.hearder1-right-space {
     margin-right: 10px;
 }
 
@@ -116,13 +116,13 @@ input{
     position: relative;
 }
 
-.gio_hang {
+.gio-hang {
     position: absolute;
     right: 0;
 }
 
 .logo,
-.gio_hang {
+.gio-hang {
     display: inline-block;
 }
 
@@ -131,26 +131,25 @@ input{
     width: auto;
 }
 
-.icon_gio_hang,
-.icon_menu {
+.icon-gio-hang,
+.icon-menu {
     width: 25px;
     height: 25px;
     margin-right: 18px;
 }
 
-.icon_gio_hang,
-.tim_kiem,
-.icon_menu {
+.icon-gio-hang,
+.tim-kiem,
+.icon-menu {
     display: inline-block;
 }
 
-.icon_menu {
+.icon-menu {
     display: none;
 }
 
 .search {
     width: 220px;
-    position: relative;
 }
 
 .searchTerm {
@@ -163,17 +162,21 @@ input{
     font-size: 11px;
     font-weight: 600;
     padding: 9px 34px 9px 15px;
+    position: relative;
 }
 
 .searchButton {
     font-size: 12px;
     padding: 0;
     border: unset;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     background-color: #fff;
     position: absolute;
-    right: 0px;
+    right: 2px;
+    line-height: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .searchButton:hover {
@@ -409,24 +412,24 @@ strong {
 }
 
 /* dang_ky */
-.form_dang_ky {
+.form-dang-ky {
     background: #ecd6d6;
     padding: 40px 0;
     margin-top: 5px;
 }
 
-.dang_ky_info {
+.dang-ky-info {
     padding: 10px;
     background: #fff;
 }
 
-.dang_ky_content {
+.dang-ky-content {
     border: 1px solid #000;
     padding: 20px;
     text-align: center;
 }
 
-.dang_ky_content p {
+.dang-ky-content p {
     margin-top: 0;
     margin-bottom: 9px;
     color: #777;
@@ -434,7 +437,7 @@ strong {
     font-weight: 400;
 }
 
-.input_dang_ky {
+.input-dang-ky {
     width: 30%;
     text-transform: uppercase;
     border: 1px solid #000;
@@ -445,7 +448,7 @@ strong {
     font-size: 13px;
 }
 
-.btn_sign_up {
+.btn-sign-up {
     color: #d19a99;
     text-transform: uppercase;
     font-size: 13px;
@@ -502,7 +505,7 @@ h3 {
 }
 
 /* footer */
-.background_footer {
+.background-footer {
     background: url(https://trinitystudio.vn/tp/T0250/img/stores/34605/footer.jpg) center center no-repeat;
     background-size: cover;
     padding: 24px 0;
@@ -526,7 +529,7 @@ h3 {
     display: none;
 }
 
-.icon_footer {
+.icon-footer {
     width: 15px;
     height: 15px;
 }
@@ -635,6 +638,9 @@ iframe {
 }
 
 /* olivia burton */
+select {
+    outline: none;
+}
 /* .block-title {
     padding: 30px 20px 0 0;
 }
@@ -1029,7 +1035,7 @@ td{
 }
 /* reponsive */
 @media only screen and (max-width: 992px) {
-    .icon_gio_hang {
+    .icon-gio-hang {
         display: none;
     }
 
@@ -1050,7 +1056,7 @@ td{
 
 @media only screen and (max-width: 768px) {
 
-    #background_header_1,
+    #background-header-1,
     .menu {
         display: none;
     }
@@ -1075,7 +1081,7 @@ td{
     }
 
     .logo,
-    .gio_hang {
+    .gio-hang {
         display: block;
     }
 
@@ -1084,22 +1090,23 @@ td{
         line-height: 70px;
     }
 
-    .icon_gio_hang,
-    .icon_menu {
+    .icon-gio-hang,
+    .icon-menu {
         display: unset;
         display: inline-block;
     }
 
-    .gio_hang {
+    .gio-hang {
         height: 45px;
         line-height: 45px;
         position: relative;
     }
-
+    form.search{
+        position: relative;
+    }
     .searchButton {
-        top: 11px;
-        right: 2px;
-        height: 26px;
+       position: absolute;
+       right: 2px;
     }
 
     .glyphicon-search {
@@ -1135,7 +1142,7 @@ td{
         height: auto;
     }
 
-    #background_header_2 {
+    #background-header-2 {
         position: sticky;
         top: 0;
         background-color: #fff;
